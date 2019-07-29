@@ -17,3 +17,13 @@ for line in file:
 
 print (answer)
 file.close()
+#---------------------------------------------------#
+ans = 0
+openfile = open("num2.txt",mode="r")
+for line2 in openfile:
+    edit = line2.split()
+    c = [int(e) for e in edit]
+    total= sum(c)
+    print (total)
+
+
