@@ -8,7 +8,7 @@ result = 0
 while not finished:
     try:
         num = int(input("Input integer: "))
-        pass
+        finished = True
     except ValueError:
         print("Please enter a valid integer.")
-print("Valid result is:", result)
+print("Valid result is:", num)
