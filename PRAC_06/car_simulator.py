@@ -20,14 +20,18 @@ while menuchoose != "q":
         driven_distance = car.drive(drive_distance)
         print("The car drove {}km".format(driven_distance))
         if car.fuel == 0:
-            print(" and ran out of fuel")
+            print("and ran out of fuel".format(driven_distance))
+        print(menu)
+        menuchoose = input("Enter your choice: ").lower()
     elif menuchoose == "r":
         refillfuel = int(input("How many units of fuel do you want to add?"))
         while refillfuel <= 0 :
             print("Fuel amount must be >= 0")
             refillfuel = int(input("How many units of fuel do you want to add?"))
-        car.addfuel(refillfuel)
+        car.add_fuel(refillfuel)
         print("Added {} units of fuel.".format(refillfuel))
+        print(menu)
+        menuchoose = input("Enter your choice: ").lower()
     else:
         print("Invalid choice")
         print(car)
