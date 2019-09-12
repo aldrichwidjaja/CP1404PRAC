@@ -1,0 +1,19 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id: mile_input
+            text:'10'
+            on_text: app.convert()
+        BoxLayout:
+            orientation: 'vertical'
+            Button:
+                text:'up'
+                on_press: app.up()
+            Button:
+                text:'down'
+                on_press: app.down()
+    Label:
+        id: mile_output
+        text:""
