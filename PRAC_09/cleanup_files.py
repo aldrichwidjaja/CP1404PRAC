@@ -1,4 +1,5 @@
 import os
+import re
 def main():
     print("Starting directory is: {}".format(os.getcwd()))
     os.chdir('Lyrics/Christmas')
@@ -17,7 +18,7 @@ def main():
 
 def get_fixed_filename(filename):
     new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
-    if filename.endswith()
+    new_name = re.sub(r'(?<=[a-z])(?=[A-Z])', '_', new_name)
     return new_name
 
 def demo_walk():

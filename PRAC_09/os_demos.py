@@ -18,7 +18,6 @@ def main():
 
 def get_fixed_filename(filename):
     new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
-    new_name = re.sub(r'(?<=[a-z])(?=[A-Z])', '_', new_name)
     return new_name
 
 def demo_walk():
